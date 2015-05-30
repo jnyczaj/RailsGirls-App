@@ -9,11 +9,14 @@
   <strong>Description:</strong>
   <%= @idea.description %>
 </p>
-
+<p>
+<strong>Category:</strong>
+<%= @idea.category.name if @idea.category.present? %>
+</p>
 <p>
   <strong>Picture:</strong>
   <%= image_tag(@idea.picture_url, :width => 600) if @idea.picture.present? %>
-  
+
 </p>
 
 <%= link_to 'Edit', edit_idea_path(@idea) %> |
